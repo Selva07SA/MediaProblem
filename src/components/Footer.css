@@ -1,8 +1,8 @@
 .footer {
   background:
-    radial-gradient(ellipse 72% 60% at 50% 0%, rgba(121, 50, 236, 0.26), transparent 70%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.86) 0%, #000000 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+    radial-gradient(ellipse 72% 60% at 50% 0%, rgba(212, 175, 55, 0.22), transparent 70%),
+    linear-gradient(180deg, rgba(193, 225, 193, 0.9) 0%, #f9fbf9 100%);
+  border-top: 1px solid rgba(90, 107, 90, 0.2);
   padding: 4rem 0 2rem;
   margin-top: 6rem;
   position: relative;

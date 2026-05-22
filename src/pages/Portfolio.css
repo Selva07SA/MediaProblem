@@ -16,10 +16,12 @@
 .portfolio-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  background: var(--gradient-light);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  /* Use solid black for the portfolio hero heading */
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #000 !important;
+  background-clip: unset !important;
+  color: #000 !important;
 }
 
 .portfolio-hero p {
@@ -60,7 +62,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1;
-  background: rgba(23, 23, 23, 0.72);
+  background: rgba(26, 46, 26, 0.08);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   display: flex;
@@ -79,7 +81,7 @@
 }
 
 .project-card:hover .project-image {
-  border-color: rgba(255, 162, 0, 0.36);
+  border-color: rgba(217, 119, 86, 0.36);
   background: var(--color-surface);
 }
 
@@ -90,7 +92,7 @@
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(11, 15, 25, 0.72);
+  background: rgba(26, 46, 26, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +109,7 @@
   height: 60px;
   border-radius: 50%;
   background: var(--gradient-purple);
-  color: #ffffff;
+  color: var(--color-surface);
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
@@ -119,7 +121,7 @@
 
 .play-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(255, 45, 85, 0.42);
+  box-shadow: 0 0 30px rgba(217, 119, 86, 0.42);
 }
 
 .play-btn::before {
@@ -134,7 +136,7 @@
 
 .project-info {
   padding: 1.5rem;
-  background: rgba(23, 23, 23, 0.72);
+  background: rgba(249, 251, 249, 0.95);
   border: 1px solid var(--color-border);
   border-top: none;
   border-radius: 0 0 12px 12px;
@@ -155,7 +157,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(11, 15, 25, 0.92);
+  background: rgba(26, 46, 26, 0.14);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +177,7 @@
   right: 0;
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--text-strong);
   font-size: 2rem;
   cursor: pointer;
   transition: var(--transition);
@@ -193,7 +195,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 12px;
-  background: #000000;
+  background: var(--color-surface);
 }
 
 .video-container video {
@@ -241,7 +243,7 @@
 .stat-item {
   text-align: center;
   padding: 2rem;
-  background: rgba(23, 23, 23, 0.72);
+  background: rgba(26, 46, 26, 0.08);
   border: 1px solid var(--color-border);
   backdrop-filter: blur(10px);
   border-radius: 8px;
@@ -251,7 +253,7 @@
 
 .stat-item:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 162, 0, 0.32);
+  border-color: rgba(217, 119, 86, 0.32);
   background: var(--color-surface);
 }
 
