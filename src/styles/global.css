@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-height: 85px;
+  --color-page: #000000;
+  --color-surface: #111111;
+  --color-surface-raised: #171717;
+  --color-surface-muted: #08020f;
+  --color-border: rgba(125, 125, 125, 0.4);
+  --color-border-strong: #7d7d7d;
+  --color-link: #ffa200;
+  --color-accent: #7932ec;
+  --color-accent-soft: #f18cb2;
+  --color-ink: #ffffff;
+  --color-text: rgba(255, 255, 255, 0.85);
+  --color-muted: rgba(255, 255, 255, 0.66);
+  --color-purple: #7932ec;
+  --color-purple-light: #a06cff;
+  --color-purple-dark: #23005c;
+  --color-orange: #ffa200;
+  --color-pink: #ff2d55;
+  --color-cyan: #00aeff;
+  --primary-dark: var(--color-page);
+  --surface-dark: var(--color-surface);
+  --surface-soft: var(--color-surface-muted);
+  --primary-light: var(--color-ink);
+  --text-strong: var(--color-ink);
+  --text-body: var(--color-text);
+  --text-muted: var(--color-muted);
+  --accent-purple: var(--color-purple);
+  --accent-lilac: var(--color-purple-light);
+  --accent-purple-dark: var(--color-purple-dark);
+  --gradient-dark: linear-gradient(135deg, #000000 0%, #160038 48%, #000000 100%);
+  --gradient-light: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.82) 52%, rgba(255, 255, 255, 0.62) 100%);
+  --gradient-purple: linear-gradient(135deg, #7932ec 0%, #ff2d55 54%, #ffa200 100%);
+  --gradient-heading: linear-gradient(135deg, #ffffff 0%, #f18cb2 46%, #ffa200 100%);
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-display: var(--font-heading);
+  --transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-dark);
+  color: var(--text-body);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.app,
+.main-content,
+section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.app {
+  background:
+    radial-gradient(ellipse 72% 22% at 50% 0%, rgba(121, 50, 236, 0.56), transparent 74%),
+    radial-gradient(ellipse 66% 18% at 50% 46%, rgba(121, 50, 236, 0.22), transparent 76%),
+    radial-gradient(ellipse 78% 20% at 50% 100%, rgba(121, 50, 236, 0.5), transparent 74%),
+    linear-gradient(180deg, #120322 0%, #020103 17%, #000000 44%, #030006 72%, #0b0014 100%);
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
+  padding-top: var(--header-height);
+  background: transparent;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+
+/* Light Theme */
+body.light-theme {
+  background-color: var(--primary-dark);
+  color: var(--text-body);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* Global Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(121, 50, 236, 0.34);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 45, 85, 0.48);
+  }
+}
+
+/* Utility Classes */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+p {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+}
+
+.btn-primary {
+  background: var(--gradient-purple);
+  color: #ffffff;
+  box-shadow: 0 0 22px rgba(255, 162, 0, 0.18);
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 45, 85, 0.34);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+}
+
+.btn-secondary:hover {
+  background: rgba(121, 50, 236, 0.18);
+  border-color: rgba(255, 162, 0, 0.44);
+  color: var(--color-ink);
+  transform: translateY(-2px);
+}
+
+#home,
+#services,
+#portfolio,
+#contact {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.gradient-premium {
+  background: var(--gradient-heading);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 81px;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Loading Animation */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    transparent 40%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
